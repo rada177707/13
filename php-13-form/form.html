@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ оборудования</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        label { display: inline-block; width: 260px; vertical-align: top; }
+        input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+            width: 300px;
+        }
+        textarea { height: 80px; }
+        .row { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+<h2>Заказ оборудования</h2>
+
+<form action="obrabotchik.php" method="post">
+
+    <div class="row">
+        <label>ФИО:</label>
+        <input type="text" name="fio" size="40">
+    </div>
+
+    <div class="row">
+        <label>Телефон:</label>
+        <input type="tel" name="phone" size="40">
+    </div>
+
+    <div class="row">
+        <label>E-mail:</label>
+        <input type="email" name="email" size="40">
+    </div>
+
+    <div class="row">
+        <label>Адрес:</label>
+        <textarea name="address" rows="3" cols="40"></textarea>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <label>Выберите интересующее Вас направление:</label><br>
+        <select name="direction">
+            <option value="">-- выберите --</option>
+            <option value="obshepit">Оборудование для общепита</option>
+            <option value="torgovoe">Торговое оборудование</option>
+            <option value="holodilnoe">Холодильное оборудование</option>
+            <option value="kuhonnoe">Кухонное оборудование</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <label>Выберите интересующую Вас группу оборудования:</label><br>
+        <select name="group_eq">
+            <option value="">-- выберите --</option>
+            <option value="pliti">Плиты</option>
+            <option value="pechi">Печи</option>
+            <option value="friturnicy">Фритюрницы</option>
+            <option value="holodilniki">Холодильники</option>
+            <option value="mikseri">Миксеры</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <label>Укажите наименование:</label>
+        <input type="text" name="item_name" size="40">
+    </div>
+
+    <div class="row">
+        <label>Укажите модель:</label>
+        <input type="text" name="item_model" size="40">
+    </div>
+
+    <div class="row">
+        <label>Укажите количество:</label>
+        <input type="text" name="item_count" size="10">
+    </div>
+
+    <div class="row">
+        <label>Комментарии:</label>
+        <textarea name="comment" rows="4" cols="40"></textarea>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Сбросить">
+    </div>
+
+</form>
+
+</body>
+</html>
